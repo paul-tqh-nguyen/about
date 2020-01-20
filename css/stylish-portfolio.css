@@ -1,0 +1,355 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    width: 100%;    
+    height: 100%;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.v {
+    text-shadow: 1px 1px black, -1px 1px black, 1px -1px black, -1px -1px black;
+}
+
+
+.bg-overall {
+  color: #fff;
+  background-color: #009933;
+}
+
+a.bg-overall:hover {
+  background-color: #009933;
+}
+
+.text-overall {
+  color: #009966;
+}
+a {
+  color: #336600;
+}
+
+a:hover, a:focus {
+  color: black;
+}
+
+/* Header Row */
+
+#header-row {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 56px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: rgba(0,153,51,0.2);
+    color: rgba(200, 200, 200, 1.0);
+    transition: background-color 0.25s;
+} 
+
+#header-row:hover {
+    transition: background-color 0.25s;
+    color: white;
+    background-color: rgba(0,153,51,1);
+}
+
+#header-row ul {
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+#header-row li {
+    float: left;
+}
+
+#header-row li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+#header-row li a:hover {
+    font-size: 1em;
+}
+
+/* Custom Button Styles */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+}
+
+/* Side Menu */
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    margin-right: -250px;
+    overflow-y: auto;
+    background: #222;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+#menu-toggle {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle {
+    margin: 5px 5px 0 0;
+}
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(https://live.staticflickr.com/5520/11639389514_3212a4cde6_k.jpg) no-repeat scroll;
+    background-position: right 0px top 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.header-text {
+    background-color: rgba(0,0,0,0.55);
+    padding: 40px 40px 40px 40px;
+}
+
+.header-text:hover {
+    background-color: rgba(0,0,0,0.75)
+}
+
+/* About */
+
+.about {
+    padding: 50px 0;
+}
+
+/* Services */
+
+.services {
+    padding: 50px 0;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+/* Callout */
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../img/callout.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: 50px 0;
+}
+
+.portfolio-item {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    background: #f0f0f0;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.portfolio-item p{
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.portfolio-item a {
+    color: black;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.portfolio-item a:hover, a:focus {
+  color: #336600;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+.img-portfolio:hover {
+    opacity: 0.8;
+}
+
+/* Call to Action */
+
+.call-to-action {
+    padding: 50px 0;
+}
+
+.call-to-action .btn {
+    margin: 10px;
+}
+
+/* Map */
+
+.map {
+    height: 500px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
+/* Footer */
+
+#contact {   
+    height: 40%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+footer {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background: url(https://live.staticflickr.com/7424/11551449493_e7213c6b64_k.jpg) no-repeat scroll;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
