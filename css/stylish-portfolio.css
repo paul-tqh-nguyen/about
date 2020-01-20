@@ -102,10 +102,7 @@ a:hover, a:focus {
   text-decoration: none;
   padding-left: 5vw;
   padding-right: 5vw;
-}
-
-#header-row li a:hover {
-    font-size: 1em;
+  font-size: 1vw;
 }
 
 /* Custom Button Styles */
@@ -248,7 +245,11 @@ hr.header-text-block-hr {
 }
 
 .header h1 {
-    font-size: 3.0em;
+    font-size: 5vw;
+}
+
+.header h3 {
+    font-size: 1.5em;
 }
 
 .header a {
