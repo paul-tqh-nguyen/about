@@ -276,6 +276,15 @@ hr.header-text-block-hr {
     transition: background-color 0.25s;
 }
 
+#header-text-block-title-text {
+    font-weight: bold;
+    font-size: 5vw;
+}
+
+#header-text-block-title-text.when-on-mobile {
+    font-size: 2em;
+}
+
 .header-text-block-verbose-text.when-on-mobile {
     display: none;
 }
