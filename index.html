@@ -477,7 +477,7 @@
     // Prevent header row from showing on mobile
     var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/)); // @hack user agent matching is not ideal
     if (isMobile) {
-	$(".header-row").toggleClass("when-on-mobile");
+	$("#header-row").toggleClass("when-on-mobile");
 	$(".header-text-block-verbose-text").toggleClass("when-on-mobile");
 	$(".header-text-block-terse-text").toggleClass("when-on-mobile");
     }

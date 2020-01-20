@@ -281,12 +281,12 @@ hr.header-text-block-hr {
 }
 
 .header-text-block-terse-text.when-on-mobile {
-    font-size: min(1.5em);
+    font-size: 1.5em;
     padding: 10px 10px 10px 10px;
 }
 
 .header-text-block-terse-text.when-on-mobile h1 {
-    font-size: min(1.5em);
+    font-size: 2vw;
 }
 
 #header-row.when-on-mobile {
