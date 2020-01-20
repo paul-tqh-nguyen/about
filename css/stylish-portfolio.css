@@ -276,13 +276,17 @@ hr.header-text-block-hr {
     transition: background-color 0.25s;
 }
 
-#header-text-block-verbose-text.when-on-mobile {
+.header-text-block-verbose-text.when-on-mobile {
     display: none;
 }
 
-#header-text-block-terse-text.when-on-mobile {
-    font-size: min(1em);
+.header-text-block-terse-text.when-on-mobile {
+    font-size: min(1.5em);
     padding: 10px 10px 10px 10px;
+}
+
+.header-text-block-terse-text.when-on-mobile h1 {
+    font-size: min(1.5em);
 }
 
 #header-row.when-on-mobile {
