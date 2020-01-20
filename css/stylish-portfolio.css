@@ -142,6 +142,11 @@ hr.small {
     max-width: 100px;
 }
 
+hr.header-text-block-hr {
+    max-width: 25vw;
+    border-color: rgba(255,255,255,0.1);
+}
+
 /* Side Menu */
 
 #sidebar-wrapper {
