@@ -58,7 +58,6 @@ a:hover, a:focus {
     top: 0px;
     right: 0px;
     left: 0px;
-    height: 56px;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
@@ -72,6 +71,7 @@ a:hover, a:focus {
 
 #header-row:hover {
     transition: background-color 0.25s;
+    text-align: center;
     color: white;
     background-color: rgba(0,153,51,1);
 }
@@ -84,7 +84,15 @@ a:hover, a:focus {
 }
 
 #header-row li {
+    padding-top: 17px;
+    padding-bottom: 17px;
     float: left;
+    height: 100%;
+}
+
+#header-row li:hover {
+    background-color: rgba(0,100,10,1.0);
+    transition: background-color 0.25s;
 }
 
 #header-row li a {
@@ -234,13 +242,30 @@ hr.small {
     -o-background-size: cover;
 }
 
-.header-text {
-    background-color: rgba(0,0,0,0.55);
-    padding: 40px 40px 40px 40px;
+.header a {
+    text-decoration: none;
+    color: white;
 }
 
-.header-text:hover {
-    background-color: rgba(0,0,0,0.75)
+.header a:focus {
+    color: white;
+}
+
+.header-text-block {
+    color: white;
+    width: 60vw;
+    background-color: rgba(0,0,0,0.55);
+    padding: 40px 40px 40px 40px;
+    transition: background-color 0.25s;
+}
+
+.header-text-block:hover {
+    background-color: rgba(0,0,0,0.75);
+    transition: background-color 0.25s;
+}
+
+.header-text-block p {
+    font-size: 1.3em;
 }
 
 /* About */
