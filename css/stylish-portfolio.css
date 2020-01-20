@@ -6,6 +6,8 @@
 
 /* Global Styles */
 
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
 html,
 body {
     width: 100%;    
@@ -245,6 +247,7 @@ hr.header-text-block-hr {
 }
 
 .header h1 {
+    font-family: 'Arvo','FranklinPro','FranklinITCProLight','Franklin Gothic Medium','Franklin Gothic','ITC Franklin Gothic','Apple SD Gothic Neo','Myriad Set Pro','Helvetica Neue','Helvetica Neue Light',Helvetica,Arial,'Lucida Grande',serif;
     font-size: 5vw;
 }
 
