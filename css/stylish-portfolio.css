@@ -285,10 +285,6 @@ hr.header-text-block-hr {
     padding: 10px 10px 10px 10px;
 }
 
-.header-text-block-terse-text.when-on-mobile h1 {
-    font-size: 2vw;
-}
-
 #header-row.when-on-mobile {
     display: none;
 }
