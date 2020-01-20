@@ -63,7 +63,6 @@
   <!-- Header Row -->
   <div id="header-row">
     <center>
-      <div>
       <ul>
 	<li>
           <a href="#top">Home</a>
@@ -84,7 +83,6 @@
           <a href="#contact">Contact</a>
 	</li>
       </ul>
-      </div>
     </center>
   </div>
 
@@ -345,7 +343,7 @@
 		  <th>
 		    <center>
 		      <img src="img/bilateral_filter/bilateral_filter_out.png" alt="" style="width:14vw;" hspace="5">
-		      <br>Denoising via Bilateral Filter
+		      <br>Bilateral Filter
 		    </center>
 		  </th>
 		</tr>
@@ -464,39 +462,45 @@
 
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
-
+  
   <!-- Custom Theme JavaScript -->
   <script>
-  // Closes the sidebar menu
-  $("#menu-close").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-  });
-
-  // Opens the sidebar menu
-  $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-  });
-
-    // Scrolls to the selected menu item on the page
-  $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+	e.preventDefault();
+	$("#sidebar-wrapper").toggleClass("active");
     });
-  });
-  </script>
 
+    // Prevent header row from showing on mobile
+    var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/)); // @hack user agent matching is not ideal
+    if (isMobile) {
+	$("#header-row").toggleClass("hidden-from-mobile");
+    }
+    
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#sidebar-wrapper").toggleClass("active");
+    });
+    
+    // Scrolls to the selected menu item on the page
+    $(function() {
+	$('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+		
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		if (target.length) {
+		    $('html,body').animate({
+			scrollTop: target.offset().top
+		    }, 1000);
+		    return false;
+		}
+	    }
+	});
+    });
+  </script>
+  
 </body>
 
 </html>

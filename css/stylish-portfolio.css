@@ -53,6 +53,10 @@ a:hover, a:focus {
   color: black;
 }
 
+#header-row.hidden-from-mobile {
+    display: none;
+}
+
 /* Header Row */
 
 #header-row {
@@ -69,7 +73,7 @@ a:hover, a:focus {
     background-color: rgba(0,153,51,0.2);
     color: rgba(200, 200, 200, 1.0);
     transition: background-color 0.25s;
-} 
+}
 
 #header-row:hover {
     transition: background-color 0.25s;
@@ -89,7 +93,6 @@ a:hover, a:focus {
     padding-top: 17px;
     padding-bottom: 17px;
     float: left;
-    height: 100%;
 }
 
 #header-row li:hover {
