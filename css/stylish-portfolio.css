@@ -53,10 +53,6 @@ a:hover, a:focus {
   color: black;
 }
 
-#header-row.hidden-from-mobile {
-    display: none;
-}
-
 /* Header Row */
 
 #header-row {
@@ -278,6 +274,19 @@ hr.header-text-block-hr {
 .header-text-block:hover {
     background-color: rgba(0,0,0,0.75);
     transition: background-color 0.25s;
+}
+
+#header-text-block-verbose-text.when-on-mobile {
+    display: none;
+}
+
+#header-text-block-terse-text.when-on-mobile {
+    font-size: min(1em);
+    padding: 10px 10px 10px 10px;
+}
+
+#header-row.when-on-mobile {
+    display: none;
 }
 
 /* About */

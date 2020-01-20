@@ -93,13 +93,19 @@
       <center>
 	<a href="#about">
 	  <div class="header-text-block">
-	    <h1>Paul Nguyen</h1>
-	    <hr class="header-text-block-hr">
-	    <h3>Software Engineer</h3>
-	    <h3>Data Engineer</h3>
-	    <h3>Knowledge Graph Expert</h3>
-	    <hr class="header-text-block-hr">
-	    <p>Find Out More About Me!</p>
+	    <div id="header-text-block-terse-text">
+	      <h1>Paul Nguyen</h1>
+	    </div>
+	    <div id="header-text-block-verbose-text">
+	      <hr class="header-text-block-hr">
+	      <h3>Software Engineer</h3>
+	      <h3>Data Engineer</h3>
+	      <h3>Knowledge Graph Expert</h3>
+	      <hr class="header-text-block-hr">
+	    </div>
+	    <div id="header-text-block-terse-text">
+	      <p>More About Paul!</p>
+	    </div>
 	  </div>
 	</a>
       </center>
@@ -470,8 +476,10 @@
 
     // Prevent header row from showing on mobile
     var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/)); // @hack user agent matching is not ideal
-    if (isMobile) {
-	$("#header-row").toggleClass("hidden-from-mobile");
+    if (!isMobile) {
+	$("#header-row").toggleClass("when-on-mobile");
+	$("#header-text-block-verbose-text").toggleClass("when-on-mobile");
+	$("#header-text-block-terse-text").toggleClass("when-on-mobile");
     }
     
     // Opens the sidebar menu
