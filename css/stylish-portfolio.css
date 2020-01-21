@@ -334,6 +334,10 @@ hr.header-text-block-hr {
     padding: 50px 0;
 }
 
+.portfolio-container {
+    width: 90vw;
+}
+
 .portfolio-item {
     font-size: 1.2em;
     margin-bottom: 30px;
