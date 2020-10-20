@@ -1,8 +1,21 @@
 
+/********/
+/* Menu */
+/********/
+
 $("#menu-close").click(function(e) {
     e.preventDefault();
     $("#sidebar-wrapper").toggleClass("active");
 });
+
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+/*******************/
+/* Mobile Handling */
+/*******************/
 
 var isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/)); // @todo user agent matching is not ideal
 if (isMobile) {
@@ -11,10 +24,9 @@ if (isMobile) {
     $("#header-text-block-title-text").toggleClass("when-on-mobile");
 }
 
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#sidebar-wrapper").toggleClass("active");
-});
+/*************/
+/* Scrolling */
+/*************/
 
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
