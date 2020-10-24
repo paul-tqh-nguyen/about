@@ -89,13 +89,14 @@ const loadFileContentText = fileName => {
 { // Load Sample Work Content
     
     const sampleWorkFileNameToSampleWorkLabelsPairs = [
+        ['sample_work_descriptions/image_perforation.html', ['All', 'Handpicked', 'Image Processing']],
         ['sample_work_descriptions/google_reviews_transformers_comparison.html', ['All', 'Deep Learning', 'NLP']],
-        ['sample_work_descriptions/image_perforation.html', ['All', 'Image Processing']],
-        ['sample_work_descriptions/patch_match.html', ['All', 'Image Processing']],
-        ['sample_work_descriptions/bilateral_filter.html', ['All', 'Image Processing']],
-        ['sample_work_descriptions/canny_edge_detector.html', ['All', 'Image Processing']],
-        ['sample_work_descriptions/arxiv_as_a_newspaper.html', ['All', 'Front End']],
-        ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Front End']],
+        ['sample_work_descriptions/anime_recommendation_system_comparisons.html', ['All', 'Deep Learning', 'Recommender Systems']],
+        ['sample_work_descriptions/patch_match.html', ['All', 'Handpicked', 'Image Processing']],
+        ['sample_work_descriptions/bilateral_filter.html', ['All', 'Handpicked', 'Image Processing']],
+        ['sample_work_descriptions/canny_edge_detector.html', ['All', 'Handpicked', 'Image Processing']],
+        ['sample_work_descriptions/arxiv_as_a_newspaper.html', ['All', 'Handpicked', 'Front End']],
+        ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Handpicked', 'Front End']],
     ];
     const sampleWorkFileNames = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[0]);
     const sampleWorkLabelArrays = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[1]);
@@ -110,7 +111,6 @@ const loadFileContentText = fileName => {
                 const sampleWorkLabelClass = `sample-work-item-${sampleWorkLabel.replace(' ', '')}`;
                 sampleWorkItemDiv.classList.add(sampleWorkLabelClass);
             });
-            
         });
         const sampleWorkTopicsDiv = document.querySelector('#sample-work-topics');
         const uniqueSampleWorkLabels = uniqueArray(sampleWorkLabelArrays.reduce((a,b) => a.concat(b), [])).sort();
@@ -129,7 +129,7 @@ const loadFileContentText = fileName => {
                 sampleWorkTopicsDiv.querySelectorAll('.sample-work-link').forEach(otherSampleWorkItemLink => otherSampleWorkItemLink.classList.remove('active'));
                 sampleWorkItemLink.classList.add('active');
             };
-            if (i === 0) {
+            if (sampleWorkLabel === 'Handpicked') {
                 sampleWorkItemLink.onclick();
             }
             sampleWorkTopicsDiv.append(sampleWorkItemLink);
