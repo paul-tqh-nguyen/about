@@ -92,6 +92,7 @@ const loadFileContentText = fileName => {
         ['sample_work_descriptions/impact_of_attention.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/image_perforation.html', ['All', 'Handpicked', 'Image Processing']],
         ['sample_work_descriptions/google_reviews_transformers_comparison.html', ['All', 'Deep Learning', 'NLP']],
+        ['sample_work_descriptions/reuters_topic_labelling.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/anime_recommendation_system_comparisons.html', ['All', 'Deep Learning', 'Recommender Systems']],
         ['sample_work_descriptions/patch_match.html', ['All', 'Handpicked', 'Image Processing']],
         ['sample_work_descriptions/bilateral_filter.html', ['All', 'Handpicked', 'Image Processing']],
