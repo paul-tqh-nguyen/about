@@ -89,6 +89,7 @@ const loadFileContentText = fileName => {
 { // Load Sample Work Content
     
     const sampleWorkFileNameToSampleWorkLabelsPairs = [
+        ['sample_work_descriptions/google_reviews_transformers_comparison.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/image_perforation.html', ['All', 'Image Processing']],
         ['sample_work_descriptions/patch_match.html', ['All', 'Image Processing']],
         ['sample_work_descriptions/bilateral_filter.html', ['All', 'Image Processing']],
