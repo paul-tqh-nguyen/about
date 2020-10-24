@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
 /* Global Styles */
 
@@ -46,7 +41,8 @@ a.bg-overall:hover {
   color: #009966;
 }
 a {
-  color: #336600;
+    transition: all 0.25s;
+    color: #336600;
 }
 
 a:hover, a:focus {
@@ -293,6 +289,52 @@ hr.header-text-block-hr {
     display: none;
 }
 
+/* Sample Work */
+
+#sample-work-topics {
+    padding: 0px 20px 20px 20px;
+}
+
+#sample-work-topics h4 {
+    padding: 25px;
+}
+
+#sample-work-topics a.sample-work-link {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.0);
+    user-select: none; 
+}
+
+#sample-work-topics a.sample-work-link.active,
+#sample-work-topics a.sample-work-link.active:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#sample-work-topics a.sample-work-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#sample-work-items {
+    transition: all 1s;
+}
+
+.sample-work-item {
+    transition: all 1s;
+    transition-timing-function: linear;
+    transform: scaleY(0);
+    max-height: 0px;
+}
+
+.sample-work-item.active {
+    transform: scaleY(1);
+    max-height: 200vh;
+}
+
 /* About */
 
 .about {
@@ -337,11 +379,10 @@ hr.header-text-block-hr {
     font-size: 1.2em;
     margin-bottom: 30px;
     background: #f0f0f0;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
+    padding: 30px;
 }
 
-.portfolio-item p{
+.portfolio-item p {
     padding-left: 2vw;
     padding-right: 2vw;
 }

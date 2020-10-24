@@ -44,3 +44,100 @@ $(function() {
 	return false;
     });
 });
+
+/***************/
+/* Sample Work */
+/***************/
+
+const isUndefined = value => value === void(0);
+
+const uniqueArray = array => [...new Set(array)];
+    
+const createNewElement = (childTag, {classes, attributes, innerHTML}={}) => {
+    const newElement = childTag === 'svg' ? document.createElementNS('http://www.w3.org/2000/svg', childTag) : document.createElement(childTag);
+    if (!isUndefined(classes)) {
+        classes.forEach(childClass => newElement.classList.add(childClass));
+    }
+    if (!isUndefined(attributes)) {
+        Object.entries(attributes).forEach(([attributeName, attributeValue]) => {
+            newElement.setAttribute(attributeName, attributeValue);
+        });
+    }
+    if (!isUndefined(innerHTML)) {
+        newElement.innerHTML = innerHTML;
+    }
+    return newElement;
+};
+
+const sampleWorkItemsDiv = document.querySelector('#sample-work-items');
+const sampleWorkSelectorDiv = document.querySelector('#sample-work-selector');
+
+const loadFileContentText = fileName => {
+    return new Promise((resolve, reject) => {
+        const request = new XMLHttpRequest();
+        request.open('GET', fileName, true);
+        request.onreadystatechange = function() {
+            if (this.readyState!==4) return;
+            if (this.status!==200) return;
+            resolve(this.responseText);
+        };
+        request.onerror = () => reject(request.statusText);
+        request.send();
+    });
+};
+
+{ // Load Sample Work Content
+    
+    const sampleWorkFileNameToSampleWorkLabelsPairs = [
+        ['sample_work_descriptions/image_perforation.html', ['All', 'Image Processing']],
+        ['sample_work_descriptions/patch_match.html', ['All', 'Image Processing']],
+        ['sample_work_descriptions/bilateral_filter.html', ['All', 'Image Processing']],
+        ['sample_work_descriptions/canny_edge_detector.html', ['All', 'Image Processing']],
+        ['sample_work_descriptions/arxiv_as_a_newspaper.html', ['All', 'Front End']],
+        ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Front End']],
+    ];
+    const sampleWorkFileNames = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[0]);
+    const sampleWorkLabelArrays = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[1]);
+    
+    const fileContentPromises = sampleWorkFileNames.map(sampleWorkFileName => loadFileContentText(sampleWorkFileName));
+    Promise.all(fileContentPromises).then(fileContentStrings => {
+        fileContentStrings.forEach((sampleWorkInnerHTML, i) => {
+            const sampleWorkItemDiv = createNewElement('div', {classes: ['sample-work-item'], innerHTML: sampleWorkInnerHTML});
+            sampleWorkItemsDiv.append(sampleWorkItemDiv);
+            const sampleWorkLabelArray = sampleWorkLabelArrays[i];
+            sampleWorkLabelArray.forEach(sampleWorkLabel => {
+                const sampleWorkLabelClass = `sample-work-item-${sampleWorkLabel.replace(' ', '')}`;
+                sampleWorkItemDiv.classList.add(sampleWorkLabelClass);
+            });
+            
+        });
+        const sampleWorkTopicsDiv = document.querySelector('#sample-work-topics');
+        const uniqueSampleWorkLabels = uniqueArray(sampleWorkLabelArrays.reduce((a,b) => a.concat(b), [])).sort();
+        uniqueSampleWorkLabels.forEach((sampleWorkLabel, i)  => {
+            const sampleWorkLabelClass = `sample-work-item-${sampleWorkLabel.replace(' ', '')}`;
+            const sampleWorkItemLink = createNewElement('a', {classes: ['sample-work-link'], innerHTML: sampleWorkLabel});
+            sampleWorkItemLink.onclick = () => {
+                const sampleWorkItems = sampleWorkItemsDiv.querySelectorAll('.sample-work-item');
+                sampleWorkItems.forEach(sampleWorkItem => {
+                    if (sampleWorkItem.classList.contains(sampleWorkLabelClass)) {
+                        sampleWorkItem.classList.add('active');
+                    } else {
+                        sampleWorkItem.classList.remove('active');
+                    }
+                });
+                sampleWorkTopicsDiv.querySelectorAll('.sample-work-link').forEach(otherSampleWorkItemLink => otherSampleWorkItemLink.classList.remove('active'));
+                sampleWorkItemLink.classList.add('active');
+            };
+            if (i === 0) {
+                sampleWorkItemLink.onclick();
+            }
+            sampleWorkTopicsDiv.append(sampleWorkItemLink);
+        });
+    }).catch(err => {
+	console.error(err.message);
+	return;
+    });
+    
+}
+
+document.querySelector('#sample-work-topics').style.display = 'none'; // @todo add this feature back in when sufficiently ready

@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="portfolio-item">
+    <h3>Bilateral Filter</h3>
+    <h4>A Classic Edge Preserving Low Pass Filter for Image Smoothing and Denoising.</h4>
+    <br>
+    <table style="width:100%">
+      <tr>
+        <th>
+	  <center>
+	    <img src="../img/bilateral_filter/bilateral_filter_input.png" alt="" style="width:14vw;" hspace="5">
+	    <br>Input Image
+	  </center>
+	</th>
+	<th>
+	  <center>
+	    <img src="../img/bilateral_filter/bilateral_filter_gaussian_filter_out.png" alt="" style="width:14vw;" hspace="5">
+	    <br>Gaussian Denoising
+	  </center>
+	</th>
+	<th>
+	  <center>
+	    <img src="../img/bilateral_filter/bilateral_filter_out.png" alt="" style="width:14vw;" hspace="5">
+	    <br>Bilateral Filter
+	  </center>
+	</th>
+      </tr>
+    </table>
+    <br>
+    <p>Image smoothing and denoising is a very important part of almost all computer vision and graphics algorithms. The issue with using basic Gaussian blurs or other linear filters are that they may cause us to lose important structural data in our image (think about smoothing a checkerboard with a basic Gaussian blur, we would lose our strong edges). In order to maintain edges, the bilateral filter assigns weights to it's neighbors based not only on spatial distance but also on intensity distances as well. This is demonstrated in how the grass in the above images are not blurred into the other objects when processed with bilateral filter.</p>
+    <p>Source code: <a href="https://github.com/paul-tqh-nguyen/bilateral_filter">Github</a></p>
+  </div>
+</div>

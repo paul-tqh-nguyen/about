@@ -96,7 +96,7 @@
 	    <p class="lead">I am a software engineer with industry experience in data integration, natural language processing, and knowledge graph engineering.</p>
 	    <p class="lead">I am currently on the open source team at <a href="https://www.anaconda.com/">Anaconda</a>.</p>
 	    <p class="lead">Prior to <a href="https://www.anaconda.com/">Anaconda</a>, I was the Lead Data Integration Engineer at <a href="https://www.cyc.com/">Cycorp</a>.</p>
-	    <p class="lead">I earned my Master of Science degree at the <a href="https://engineering.virginia.edu/departments/computer-science">University of Virginia</a> under <a href="http://www.connellybarnes.com/work/">Connelly Barnes</a>. My <a href="#image-perforation">graduate work</a> was published in <a href="https://dl.acm.org/doi/10.1145/2904903">ACM Transactions on Graphics</a> and was presented at <a href="http://s2016.siggraph.org/technical-papers/sessions/optimizing-image-processing.html">ACM SIGGRAPH</a>.</p>
+	    <p class="lead">I earned my Master of Science degree at the <a href="https://engineering.virginia.edu/departments/computer-science">University of Virginia</a> under <a href="http://www.connellybarnes.com/work/">Connelly Barnes</a>. My graduate work was published in <a href="https://dl.acm.org/doi/10.1145/2904903">ACM Transactions on Graphics</a> and was presented at <a href="http://s2016.siggraph.org/technical-papers/sessions/optimizing-image-processing.html">ACM SIGGRAPH</a>.</p>
 	    <p class="lead">I earned my Bachelor of Science degree at <a href="https://www.wlu.edu/computer-science-department">Washington & Lee University</a> where I worked with <a href="http://eg.bucknell.edu/~jvs008/">Joshua Stough</a> on image classification.</p>
 	    <p class="lead">My resume can be found <a href="resume_paul_nguyen.pdf">here.</a></p>
 	    <p class="lead">Outside of the tech world, I worked as a <a href="https://www.youtube.com/watch?v=v9xxeWRxSbA">swing dance</a> instructor for several years under the <a href="https://www.youtube.com/user/JDECRichmond/">Jazz Dance Education Council</a>. In Austin, you might find me teaching at <a href="http://www.fouronthefloor.com/">Four on the Floor</a>.</p>
@@ -198,176 +198,14 @@
             <h2>Sample Work</h2>
             <h4 style="color: red; padding: 10px; font-size: 25px;">NOTE: This sample work summary is outdated. Please visit my <a href="https://github.com/paul-tqh-nguyen">Github profile</a> for my latest work.</h4>
             <hr class="small">
+	    <div id="sample-work-topics">
+	      <h4>Filter By Topic</h4>
+	    </div>
 	    <br>
-            <div class="row">
-              <div class="portfolio-item">
-		<h3>PatchMatch</h3>
-		<h4>A Linear Time Nearest Neighbor Field Approximation for Patch Correspondence in Images</h4>
-		<br>
-		<table style="width:100%;">
-                  <tr>
-                    <th>
-		      <center>
-			<img src="img/patchmatch/PatchMatch_A.png" alt="" style="width:22vw;" hspace="5">
-			<br>Image A
-		      </center>
-		    </th>
-                    <th>
-		      <center>
-			<img src="img/patchmatch/PatchMatch_B.png" alt="" style="width:22vw;" hspace="5">
-			<br>Image B
-		      </center>
-		    </th>
-                  </tr>
-                  <tr>
-                    <th><center><br><img src="img/patchmatch/PatchMatch_A_patches.png" alt="" style="width:22vw;" hspace="5"><br>Image A Select Patches</center></th>
-                    <th><center><br><img src="img/patchmatch/PatchMatch_B_patches.png" alt="" style="width:22vw;" hspace="5"><br>Image B Select Patches</center></th>
-                  </tr>
-		</table>
-		<br>
-		<p>Finding correspondences between patches (small neighborhoods of pixels in an image) is useful in many graphics and vision applications such as optical flow, hole filling, or super-resolution. Naive exhaustive searches can be slow as they can be <i>O(n<sup>2</sup>)</i> where <i>n</i> is the number of pixels in any of our input images. PatchMatch is a linear time patch correspondence algorithm that approximates the optimal patch correspondences between two images. </p>
-		<p>Source code: <a href="https://github.com/paul-tqh-nguyen/patchmatch">Github</a></p>
-              </div>
-            </div>
-	    <div class="row" id="image-perforation">
-              <div class="portfolio-item">
-		<h3>Image Perforation: Automatically Accelerating Image Pipelines by Intelligently Skipping Samples</h3>
-		<h4>Authors: Liming Lou, <a href="index.html">Paul Nguyen</a>, <a href="http://www.cs.virginia.edu/~jdl/">Jason Lawrence</a>, <a href="http://www.connellybarnes.com/">Connelly Barnes</a></h4>
-		<p>Accepted into <a href="https://dl.acm.org/doi/10.1145/2904903">ACM Transactions on Graphics</a>. Presented at <a href="http://s2016.siggraph.org/technical-papers/sessions/optimizing-image-processing.html">ACM SIGGRAPH</a>.</p>
-		<br>
-		<table style="width:100%">
-                  <tr>
-                    <th>
-		      <center>
-			<img src="img/image_perforation/2016_image_perforation_input.png" alt="" style="width:16vw;" hspace="5">
-			<br>Example Input
-		      </center>
-		    </th>
-                    <th>
-		      <center>
-			<img src="img/image_perforation/2016_image_perforation_reference_output.png" alt="" style="width:16vw;" hspace="5">
-			<br>Reference Output
-		      </center>
-		    </th> 
-                    <th>
-		      <center>
-			<img src="img/image_perforation/2016_image_perforation_image_perf.png" alt="" style="width:16vw;" hspace="5">
-			<br>Image Perforation
-		      </center>
-		    </th>
-                  </tr>
-		</table>
-		<br>	      
-		<p>As image processing applications become more popular on portable devices with limited processing power, there's a need to explore ways to boost speed while taking into account the hardware limitations. We introduce image perforation, a method that allows us to take an arbitrary target image processing program and automatically find optimal ways to trade off imperceptible exactness for speed.</p>
-		<p>Source Code and Data: <a href="https://github.com/uva-graphics/image_perforation">Source Code</a>, <a href="https://github.com/uva-graphics/image_perforation/tree/master/proj/images/train">Training Data</a>, <a href="docs/2016_image_perforation_testing_data.zip">Testing Data</a> </p>
-		<p>Documents: <a href="docs/2016_image_perforation_high_res.pdf">High Resolution Publication</a>, <a href="docs/2016_image_perforation_low_res.pdf">Low Resolution Publication</a>, <a href="docs/2016_image_perforation_supplemental_doc.pdf">Supplemental Results</a>, <a href="docs/2016_image_perforation_slides.pptx">Presentation Slides</a> </p>
-		Miscellaneous: <a href="docs/2016_image_perforation.bib">BibTeX</a> <br>
-              </div>
-            </div>
-            <div class="row">
-              <div class="portfolio-item">
-		<h3><a href="https://paul-tqh-nguyen.github.io/arxiv_as_a_newspaper/">Reskin</a> of <a href="https://arxiv.org/">arxiv.org</a></h3>
-		<h4>A Modern Aesthetic Applied to <a href="https://arxiv.org/">arxiv.org</a></h4>
-		<br>
-		<table style="width:100%;">
-                  <tr>
-                    <th>
-		      <center>
-			<img src="img/arxiv_as_a_newspaper/arxiv_as_a_newspaper.png" alt="" style="width:60vw;" hspace="5">
-			<br>
-			<div style="padding-top: 5px">A ReactJS Application backed by <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a> and <a href="https://medium.com/@nparsons08/mongodb-stitch-your-application-backend-delivered-as-a-service-7cf21d979ed">MongoDB Stitch</a>.</div>
-		      </center>
-		    </th>
-                  </tr>
-		</table>
-		<br>
-		<p>This is a reskin of <a href="https://arxiv.org/">arxiv.org</a> that resembles the aesthetics of a newpaper's website aimed at giving it a more modern appearance.</p>
-		<p>Source code: <a href="https://github.com/paul-tqh-nguyen/arxiv_as_a_newspaper">Github</a></p>
-		<p>Live Demo: <a href="https://paul-tqh-nguyen.github.io/arxiv_as_a_newspaper/">Demo</a>
-              </div>
-            </div>
-	    <div class="row">
-              <div class="portfolio-item">
-		<h3>Bilateral Filter</h3>
-		<h4>A Classic Edge Preserving Low Pass Filter for Image Smoothing and Denoising.</h4>
-		<br>
-		<table style="width:100%">
-                  <tr>
-                    <th>
-		      <center>
-			<img src="img/bilateral_filter/bilateral_filter_input.png" alt="" style="width:14vw;" hspace="5">
-			<br>Input Image
-		      </center>
-		    </th>
-		    <th>
-		      <center>
-			<img src="img/bilateral_filter/bilateral_filter_gaussian_filter_out.png" alt="" style="width:14vw;" hspace="5">
-			<br>Gaussian Denoising
-		      </center>
-		    </th>
-		    <th>
-		      <center>
-			<img src="img/bilateral_filter/bilateral_filter_out.png" alt="" style="width:14vw;" hspace="5">
-			<br>Bilateral Filter
-		      </center>
-		    </th>
-		  </tr>
-		</table>
-		<br>
-		<p>Image smoothing and denoising is a very important part of almost all computer vision and graphics algorithms. The issue with using basic Gaussian blurs or other linear filters are that they may cause us to lose important structural data in our image (think about smoothing a checkerboard with a basic Gaussian blur, we would lose our strong edges). In order to maintain edges, the bilateral filter assigns weights to it's neighbors based not only on spatial distance but also on intensity distances as well. This is demonstrated in how the grass in the above images are not blurred into the other objects when processed with bilateral filter.</p>
-		<p>Source code: <a href="https://github.com/paul-tqh-nguyen/bilateral_filter">Github</a></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="portfolio-item">
-		<h3>Swing Dance Scoring Tabulation</h3>
-		<h4>Automatically Score Aggregation via Relative Placement</h4>
-		<p>(work in progress!)</p>
-		<table style="width:100%;">
-                  <tr>
-                    <th>
-		      <center>
-			<img src="img/swing_dance_scores/example_score.jpg" alt="" style="width:65vw;" hspace="5">
-			<br>
-			<div style="padding-top: 5px">A ReactJS and ExpressJS Application backed by <a href="https://firebase.google.com/">Firebase</a>.</div>
-		      </center>
-		    </th>
-                  </tr>
-		</table>
-		<br>
-		<p>This is a web application for automatically tabulating scores via <a href="https://shuffleprojects.com/2011/swing-dance-competition-relative-placement-scoring-system/">relative placement</a> that is particularly aimed at aiding those in the Swing Dance community to put on more competitions that drive the art form forward.</p>
-		<p><strong>NB</strong>: This is a work in progress.</p>
-		<p>Source code: <a href="https://github.com/paul-tqh-nguyen/swing_dance_scores">Github</a></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="portfolio-item">
-		<h3>Canny Edge Detector</h3>
-		<h4>A Classic Edge Detection Algorithm Exploiting Strong Gradients within Images</h4>
-		<br>
-		<table style="width:100%">
-                  <tr>
-                    <th>
-		      <center>
-			<img src="img/canny_edge_detector/canny_edge_detector_input.png" alt="" style="width:20vw;" hspace="5">
-			<br>Input
-		      </center>
-		    </th>
-                    <th>
-		      <center>
-			<img src="img/canny_edge_detector/canny_edge_detector_output.png" alt="" style="width:20vw;" hspace="5">
-			<br>Edges
-		      </center>
-		    </th>
-                  </tr>
-		</table>
-		<br>
-		<p>The Canny Edge Detector is a classic computer vision algorithm used for extracting useful structural information from an image developed by <a href="https://en.wikipedia.org/wiki/John_Canny">John Canny</a>.</p>
-		<p>Source Code: <a href="https://github.com/paul-tqh-nguyen/canny_edge_detector">Source Code</a></p>
-              </div>
-            </div>
+	    <div id="sample-work-selector"></div>
+	    <div id="sample-work-items"></div>
 	    <h4>For more of my work, see my <a href="https://github.com/paul-tqh-nguyen">Github profile</a>.</h4>
-          </div>
+	  </div>
 	</div>
       </div>
     </section>
