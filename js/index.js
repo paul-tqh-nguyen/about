@@ -140,4 +140,4 @@ const loadFileContentText = fileName => {
     
 }
 
-document.querySelector('#sample-work-topics').style.display = 'none'; // @todo add this feature back in when sufficiently ready
+document.querySelector('#sample-work-topics').style.display = 'none'; // @todo enable this feature when sufficiently ready
