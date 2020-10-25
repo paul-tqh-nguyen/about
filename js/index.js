@@ -103,6 +103,7 @@ const loadFileContentText = fileName => {
         ['sample_work_descriptions/us_air_travel_visualization.html', ['All', 'Visualization']],
         ['sample_work_descriptions/caribou_location_tracking.html', ['All', 'Visualization']],
         ['sample_work_descriptions/netflix_2019_hashing_comparison.html', ['All', 'Graph Analytics', 'Visualization']],
+        ['sample_work_descriptions/stock_viewer.html', ['All', 'UI/UX', 'Visualization']],
         ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Handpicked', 'UI/UX']],
     ];
     const sampleWorkFileNames = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[0]);
