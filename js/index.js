@@ -106,6 +106,7 @@ const loadFileContentText = fileName => {
         ['sample_work_descriptions/nyc_collision_map.html', ['All', 'UI/UX', 'Visualization']],
         ['sample_work_descriptions/stock_viewer.html', ['All', 'UI/UX', 'Visualization']],
         ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Handpicked', 'UI/UX']],
+        ['sample_work_descriptions/get_food_nyc_dataset.html', ['All']],
     ];
     const sampleWorkFileNames = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[0]);
     const sampleWorkLabelArrays = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[1]);
