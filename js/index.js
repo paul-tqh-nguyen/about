@@ -101,6 +101,7 @@ const loadFileContentText = fileName => {
         ['sample_work_descriptions/canny_edge_detector.html', ['All', 'Handpicked', 'Image Processing']],
         ['sample_work_descriptions/arxiv_as_a_newspaper.html', ['All', 'Handpicked', 'UI/UX']],
         ['sample_work_descriptions/us_air_travel_visualization.html', ['All', 'Visualization']],
+        ['sample_work_descriptions/caribou_location_tracking.html', ['All', 'Visualization']],
         ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Handpicked', 'UI/UX']],
     ];
     const sampleWorkFileNames = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[0]);
