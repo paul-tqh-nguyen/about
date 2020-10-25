@@ -103,6 +103,7 @@ const loadFileContentText = fileName => {
         ['sample_work_descriptions/us_air_travel_visualization.html', ['All', 'Visualization']],
         ['sample_work_descriptions/caribou_location_tracking.html', ['All', 'Visualization']],
         ['sample_work_descriptions/netflix_2019_hashing_comparison.html', ['All', 'Graph Analytics', 'Visualization']],
+        ['sample_work_descriptions/nyc_collision_map.html', ['All', 'UI/UX', 'Visualization']],
         ['sample_work_descriptions/stock_viewer.html', ['All', 'UI/UX', 'Visualization']],
         ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Handpicked', 'UI/UX']],
     ];
@@ -124,7 +125,7 @@ const loadFileContentText = fileName => {
         const uniqueSampleWorkLabels = uniqueArray(sampleWorkLabelArrays.reduce((a,b) => a.concat(b), [])).sort();
         uniqueSampleWorkLabels.forEach((sampleWorkLabel, i)  => {
             const sampleWorkLabelClass = `sample-work-item-${sampleWorkLabel.replace(' ', '')}`;
-            const sampleWorkItemLink = createNewElement('a', {classes: ['sample-work-link'], innerHTML: sampleWorkLabel});
+            const sampleWorkItemLink = createNewElement('div', {classes: ['sample-work-link'], innerHTML: sampleWorkLabel});
             sampleWorkItemLink.onclick = () => {
                 const sampleWorkItems = sampleWorkItemsDiv.querySelectorAll('.sample-work-item');
                 sampleWorkItems.forEach(sampleWorkItem => {
