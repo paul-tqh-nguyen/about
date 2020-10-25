@@ -89,24 +89,25 @@ const loadFileContentText = fileName => {
 { // Load Sample Work Content
     
     const sampleWorkFileNameToSampleWorkLabelsPairs = [
-        ['sample_work_descriptions/impact_of_attention.html', ['All', 'Deep Learning', 'NLP']],
-        ['sample_work_descriptions/image_perforation.html', ['All', 'Handpicked', 'Image Processing']],
+        ['sample_work_descriptions/get_food_nyc_dataset.html', ['All']],
+        ['sample_work_descriptions/impact_of_attention.html', ['All', 'Paul\'s Favorites', 'Deep Learning', 'NLP']],
+        ['sample_work_descriptions/image_perforation.html', ['All', 'Paul\'s Favorites', 'Image Processing']],
         ['sample_work_descriptions/google_reviews_transformers_comparison.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/reuters_topic_labelling.html', ['All', 'Deep Learning', 'NLP']],
-        ['sample_work_descriptions/anime_recommendation_system_comparisons.html', ['All', 'Deep Learning', 'Recommender Systems']],
+        ['sample_work_descriptions/anime_recommendation_system_comparisons.html', ['All', 'Paul\'s Favorites', 'Deep Learning', 'Recommender Systems']],
         ['sample_work_descriptions/mutag_graph2vec_neural_classifier.html', ['All', 'Deep Learning', 'Graph Analytics']],
         ['sample_work_descriptions/joel_spolsky_text_generator.html', ['All', 'Deep Learning', 'NLP']],
-        ['sample_work_descriptions/patch_match.html', ['All', 'Handpicked', 'Image Processing']],
-        ['sample_work_descriptions/bilateral_filter.html', ['All', 'Handpicked', 'Image Processing']],
-        ['sample_work_descriptions/canny_edge_detector.html', ['All', 'Handpicked', 'Image Processing']],
-        ['sample_work_descriptions/arxiv_as_a_newspaper.html', ['All', 'Handpicked', 'UI/UX']],
-        ['sample_work_descriptions/us_air_travel_visualization.html', ['All', 'Visualization']],
+        ['sample_work_descriptions/patch_match.html', ['All', 'Image Processing']],
+        ['sample_work_descriptions/bilateral_filter.html', ['All', 'Image Processing']],
+        ['sample_work_descriptions/canny_edge_detector.html', ['All', 'Image Processing']],
+        ['sample_work_descriptions/arxiv_as_a_newspaper.html', ['All', 'Paul\'s Favorites', 'UI/UX']],
+        ['sample_work_descriptions/us_air_travel_visualization.html', ['All', 'Paul\'s Favorites', 'Visualization']],
         ['sample_work_descriptions/caribou_location_tracking.html', ['All', 'Visualization']],
-        ['sample_work_descriptions/netflix_2019_hashing_comparison.html', ['All', 'Graph Analytics', 'Visualization']],
+        ['sample_work_descriptions/netflix_2019_hashing_comparison.html', ['All', 'Paul\'s Favorites', 'Graph Analytics', 'Visualization']],
         ['sample_work_descriptions/nyc_collision_map.html', ['All', 'UI/UX', 'Visualization']],
         ['sample_work_descriptions/stock_viewer.html', ['All', 'UI/UX', 'Visualization']],
-        ['sample_work_descriptions/swing_dance_scores.html', ['All', 'Handpicked', 'UI/UX']],
-        ['sample_work_descriptions/get_food_nyc_dataset.html', ['All']],
+        ['sample_work_descriptions/temporal_sales_choropleth_uk_retailer.html', ['All', 'Visualization']],
+        ['sample_work_descriptions/swing_dance_scores.html', ['All', 'UI/UX']],
     ];
     const sampleWorkFileNames = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[0]);
     const sampleWorkLabelArrays = sampleWorkFileNameToSampleWorkLabelsPairs.map(pair => pair[1]);
@@ -123,7 +124,9 @@ const loadFileContentText = fileName => {
             });
         });
         const sampleWorkTopicsDiv = document.querySelector('#sample-work-topics');
-        const uniqueSampleWorkLabels = uniqueArray(sampleWorkLabelArrays.reduce((a,b) => a.concat(b), [])).sort();
+        const uniqueSampleWorkLabels = uniqueArray(sampleWorkLabelArrays.reduce((a,b) => a.concat(b), [])).filter(label => !['All', 'Paul\'s Favorites'].includes(label)).sort();
+        uniqueSampleWorkLabels.unshift('All');
+        uniqueSampleWorkLabels.push('Paul\'s Favorites');
         uniqueSampleWorkLabels.forEach((sampleWorkLabel, i)  => {
             const sampleWorkLabelClass = `sample-work-item-${sampleWorkLabel.replace(' ', '')}`;
             const sampleWorkItemLink = createNewElement('div', {classes: ['sample-work-link'], innerHTML: sampleWorkLabel});
@@ -139,7 +142,7 @@ const loadFileContentText = fileName => {
                 sampleWorkTopicsDiv.querySelectorAll('.sample-work-link').forEach(otherSampleWorkItemLink => otherSampleWorkItemLink.classList.remove('active'));
                 sampleWorkItemLink.classList.add('active');
             };
-            if (sampleWorkLabel === 'Handpicked') {
+            if (sampleWorkLabel === 'Paul\'s Favorites') {
                 sampleWorkItemLink.onclick();
             }
             sampleWorkTopicsDiv.append(sampleWorkItemLink);

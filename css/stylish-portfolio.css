@@ -297,12 +297,9 @@ hr.header-text-block-hr {
     white-space: pre-wrap;
 }
 
-#sample-work-topics h4 {
-    padding: 0px 25px 25px 25px;
-}
-
 #sample-work-topics div.sample-work-link {
     transition: all 0.5s;
+    margin: 10px 0px 10px 0px;
     padding: 10px;
     font-size: 1.25em;
     cursor: pointer;
