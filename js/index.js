@@ -95,6 +95,7 @@ const loadFileContentText = fileName => {
         ['sample_work_descriptions/reuters_topic_labelling.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/anime_recommendation_system_comparisons.html', ['All', 'Deep Learning', 'Recommender Systems']],
         ['sample_work_descriptions/mutag_graph2vec_neural_classifier.html', ['All', 'Deep Learning', 'Graph Analytics']],
+        ['sample_work_descriptions/joel_spolsky_text_generator.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/patch_match.html', ['All', 'Handpicked', 'Image Processing']],
         ['sample_work_descriptions/bilateral_filter.html', ['All', 'Handpicked', 'Image Processing']],
         ['sample_work_descriptions/canny_edge_detector.html', ['All', 'Handpicked', 'Image Processing']],
