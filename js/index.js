@@ -92,6 +92,7 @@ const loadFileContentText = fileName => {
     
     const sampleWorkFileNameToSampleWorkLabelsPairs = [
         ['sample_work_descriptions/get_food_nyc_dataset.html', ['All']],
+        ['sample_work_descriptions/autograd.html', ['All', 'Deep Learning']],
         ['sample_work_descriptions/impact_of_attention.html', ['All', 'Deep Learning', 'NLP']],
         ['sample_work_descriptions/image_perforation.html', ['All', 'Image Processing']],
         ['sample_work_descriptions/google_reviews_transformers_comparison.html', ['All', 'Deep Learning', 'NLP']],
